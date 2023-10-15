@@ -1,0 +1,12 @@
+FILENAMES := button graphics-functions
+
+OBJECT_FILES := $(addsuffix .o, $(FILENAMES))
+graphics_OBJECTS := $(OBJECT_FILES)
+graphics_FLAGS := -lSDL2 -lSDL2_ttf
+
+# compile generic target to object file (keeps file location)
+%.o:	%.cpp %.h
+	g++ -c $< -o $@
+
+# compile the library
+graphics:	$(OBJECT_FILES)
