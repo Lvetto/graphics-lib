@@ -2,7 +2,8 @@ Semplice libreria che contiene le funzioni grafiche usate dai vari progetti.
 
 Esempio di makefile per compilare con questa libreria:
 
-'''LIBRARIES := graphics
+```
+LIBRARIES := graphics
 COMP_FLAGS :=
 
 include $(LIBRARIES)
@@ -12,5 +13,6 @@ all: main.cpp $(LIBRARIES)
 
 clean:
 	rm *.o
-	rm progr '''
+	rm progr
+	```
 
