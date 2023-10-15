@@ -1,1 +1,16 @@
-.
+Semplice libreria che contiene le funzioni grafiche usate dai vari progetti.
+
+Esempio di makefile per compilare con questa libreria:
+
+'''LIBRARIES := graphics
+COMP_FLAGS :=
+
+include $(LIBRARIES)
+
+all: main.cpp $(LIBRARIES)
+	g++ -o progr main.cpp $($(addsuffix _OBJECTS, $(LIBRARIES))) $(COMP_FLAGS) $($(addsuffix _FLAGS, $(LIBRARIES)))
+
+clean:
+	rm *.o
+	rm progr '''
+
