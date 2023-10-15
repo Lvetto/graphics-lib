@@ -2,7 +2,7 @@ Semplice libreria che contiene le funzioni grafiche usate dai vari progetti.
 
 Esempio di makefile per compilare con questa libreria:
 
-
+<pre>
 ``` LIBRARIES := graphics
 COMP_FLAGS :=
 
@@ -15,4 +15,4 @@ clean:
 	rm *.o
 	rm progr
 ```
-
+<\pre>
