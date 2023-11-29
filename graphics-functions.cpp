@@ -18,7 +18,7 @@ void drawCircle(SDL_Renderer* renderer, int centerX, int centerY, int radius, in
         }
 }
 
-void init(win_data *data, int height, int width) {
+void init(win_data *data, int height, int width, const char *title) {
     // start SDL
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         SDL_Log("Impossibile inizializzare SDL: %s", SDL_GetError());
@@ -27,7 +27,7 @@ void init(win_data *data, int height, int width) {
 
     // create window
     data->window = SDL_CreateWindow(
-        "Simulazione",
+        title,
         SDL_WINDOWPOS_UNDEFINED,
         SDL_WINDOWPOS_UNDEFINED,
         width,
