@@ -1,5 +1,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_image.h>
+#include <iostream>
 
 #ifndef G_FUNC_H
 #define G_FUNC_H

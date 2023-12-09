@@ -54,13 +54,21 @@ void init(win_data *data, int height, int width, const char *title) {
         return;
     }
 
+    // Initialize SDL_image
+    if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
+        SDL_Log("SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
+        SDL_Quit();
+        return;
+    }
+
 }
 
 void drawText(SDL_Renderer *renderer, const char *text, int dest_x, int dest_y, SDL_Color color, int size, const char *font_path) {
     // create font object
     TTF_Font *font = TTF_OpenFont(font_path, size);
     if (!font) {
-        SDL_Log("Impossibile caricare il font: %s", SDL_GetError());
+        //SDL_Log("Impossibile caricare il font: %s", TTF_GetError());
+        std::cout << TTF_GetError() << std::endl;
         return;
     }
 
